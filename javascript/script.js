@@ -349,6 +349,20 @@ function autocompletion(){
 	
 	selection = document.getElementById("selectC").value;
 	document.getElementById('navireM').value = selection;
+
+	
+}
+
+function autocompletion2(){
+	
+	identifiant = document.getElementById("identifiant").value;
+	nom = document.getElementById("nom").value;
+	prenom = document.getElementById("prenom").value;
+
+	document.getElementById("identifiantM").value = identifiant;
+	document.getElementById("nomM").value = nom;
+	document.getElementById("prenomM").value = prenom;
+	
 }
 
 function addBail(){
