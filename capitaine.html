@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Interface Capitaine</title>
+    <link rel="stylesheet" href="css/capitaine.css">
+    <script type="text/javascript" src="javascript/script.js">
+    </script>
+</head>
+<body>
+	<h1>
+		Interface Capitaine <br>
+		
+	</h1>
+	<h4><script>nombreCapitaines();</script></h4>
+	<div id="maincontainer">
+		<div id="container1">
+			<h2>Mon Profile</h2>
+			<form action="/add" method="post">
+			<script>
+				afficheMonProfile();
+			</script>
+			</form>
+		</div>
+		
+		<div id="container2">
+			<h2>Liste des navires disponibles</h2>
+			<select name="selectDispoCapitaine" id="selectC" onchange="autocompletion()" size="5">
+				<script>naviresDispo();</script>
+			</select>  
+		</div>
+		<div id="container3">
+			<h2>Demande Mission</h2>
+			<form action='/add' method="post">
+			Pays:<br>
+			<input type="text" id="paysM" name="paysM" value="" required>
+			<br>
+			Durée Bail/Durée Mission:<br>
+			<input type="text" id="dureeB" name="dureeB" value="" required> <input type="text" id="dureeM" name="dureeM" value="" required>
+			<br>
+			Prise/Début:<br>
+			<input type="text" id="priseM" name="priseM" value="" required> <input type="text" id="debutM" name="debutM" value="" required>
+			<br>
+			Rétrocession/Fin:<br>
+			<input type="text" id="retrocessionM" name="retrocessionM" value="" required> <input type="text" id="finM" name="finM" value="" required>
+			<br>
+			Navire:<br>
+			<input type="text" id="navireM" name="navireM" value="" required>
+			<br>
+			Type Mission/ID Mission:<br>
+			<input type="text" id="missionM" name="missionM" value="" required> <input type="text" id="idmissionM" name="idmissionM" value="" required>
+			<br>
+			ID Bail/Identifiant:<br>
+			<input type="text" id="idBailM" name="idBailM" value="" required> <input type="text" id="identifiantM" name="identifiantM" value="" required>
+			<br>
+			Nom:<br>
+			<input type="text" id="nomM" name="nomM" value="" required>
+			<br>
+			Prénom:<br>
+			<input type="text" id="prenomM" name="prenomM" value="" required>
+			<br>
+			<script>
+				capitaineDisponible();
+				addBail();
+			</script>
+			</form>
+			<br>
+		</div>
+
+	</div>
+	
+	<noscript>
+	    Your browser does not support javascript. Please install it in order to proceed further....
+	</noscript>
+</body>
+</html>

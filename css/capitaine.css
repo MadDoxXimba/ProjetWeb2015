@@ -1,0 +1,95 @@
+#container1{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:300px;
+	height:330px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 10px;
+	margin: 20px;
+	
+}
+#container2{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:300px;
+	height:290px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 410px;
+	margin: 20px;
+}
+#container3{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:300px;
+	height:495px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	left: 420px;
+	top: 30px;
+}
+
+#container4{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:300px;
+	height:120px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	left: 420px;
+	top: 600px;
+}
+
+#maincontainer{
+    font-family:Calibri, Helvetica, serif;
+	height: 800px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+#selectC{
+	width:300px;
+	height:250px;
+	
+}
+
+#rue{
+	margin-left: 20px;
+}
+ 
+#lieu{
+	margin-left: 18px;
+} 
+
+#ville{
+	margin-left: 17px;
+}
+
+#codepostale{
+	margin-left: 31px;
+}
+
+#pays{
+	margin-left: 16px;
+} 
+
+#nombreN{
+	margin-left: 20px;
+}
+
+h1, h2, h3, h4, nav{
+    text-align:center;
+    margin:0 0 20px;
+}
+

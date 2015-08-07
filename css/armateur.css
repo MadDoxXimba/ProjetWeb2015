@@ -1,0 +1,171 @@
+#dispo{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:150px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 10px;
+	margin: 20px;
+	
+}
+#occupe{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:150px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 10px;
+	margin: 20px;
+	left: 280px;
+}
+#capitaines{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:150px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 10px;
+	margin: 20px;
+	left: 560px;
+}
+
+#capitaines1{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:220px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: -15px;
+	margin: 20px;
+	left: 820px;
+	border-radius: 20px ;
+	font-size: 15px;
+}
+
+#capitaines2{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:580px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 220px;
+	margin: 20px;
+	left: 560px;
+	border-radius: 20px ;
+	font-size: 15px;
+}
+
+#mission{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:150px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 270px;
+	margin: 20px;
+	
+}
+
+#mission1{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:50px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 480px;
+	margin: 20px;
+	border-radius: 20px ;
+	
+}
+
+#occupe1{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:230px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 220px;
+	margin: 20px;
+	left: 282px;
+	border-radius: 20px ;
+	font-size: 15px;
+}
+
+
+#maincontainer{
+    font-family:Calibri, Helvetica, serif;
+	height: 1200px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+ 
+#selectDispoCss{
+	height: 100px;
+	width: 200px;
+} 
+
+#selectEnMissionCss{
+	height: 100px;
+	width: 200px;
+} 
+
+#selectCapitainesCss{
+	height: 100px;
+	width: 200px;
+} 
+
+#selectMissionCss{
+	height: 100px;
+	width: 200px;
+}
+
+#li1{
+	font-size: 12px;
+	position: relative;
+	margin-right: 100px;
+	top: -29px;
+
+} 
+
+#li3{
+	position:relative;
+	top: -20px;
+}
+ 
+h1, nav{
+    text-align:center;
+    margin:0 0 20px;
+}
+
+h2{
+	text-align:center;
+    margin:0 0 20px;
+	font-size:15px;
+}
+
