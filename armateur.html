@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Interface Armateur</title>
+    <link rel="stylesheet" href="css/armateur.css">
+    <script type="text/javascript" src="javascript/script.js">
+	
+    </script>
+</head>
+
+<body>
+	
+	<h1>Interface Armateur</h1>
+	
+	<div id="maincontainer">
+	
+		<div id="dispo">	
+			<h2>Navires Disponibles</h2>
+			<form action="" method="">
+			<select name="selectDispoArmateur" id="selectDispoCss" size="5">
+				<script>naviresDispo();</script>
+			</select>
+			<br>
+			
+			</form>
+		</div>
+	
+		<div id="occupe">
+			<h2>Navires En Mission</h2>
+			<select name="selectEnMission" id="selectEnMissionCss" onchange="afficheDetailsNaviresOccupe()" size="5">
+				<script>naviresNonDispo();</script>
+			</select>
+			<br>
+			
+			<br>
+			</div>
+		
+		<div id="capitaines">
+			<h2>Liste des Capitaines</h2>
+			<form type="button" action="/delete" method="post">
+			<select name="selectCapitaines" id="selectCapitainesCss" onchange="afficheDetailsCapitaine();" size="5">
+				<script>listeCapitaines();</script>
+			</select>
+			<br>
+			<input type="submit" value="Effacer"/>
+			<br>
+			</form>	
+		</div>
+		
+		
+		<div id="mission">
+		
+			<h2>Liste de demande de Mission</h2>
+			<form action="/decision" method="post">
+			<select name="selectMission" id="selectMissionCss" onchange="afficheDetailsMission()" size="5">
+				<script>listeMissions();</script>
+			</select>
+			
+			<input type="submit" value="Approuver" />
+			</form>
+		
+		
+		</div>
+		
+		<div id="mission1">
+		
+			<p id=li1>Selectionner un element pour plus d'informations</p>
+			
+		
+		</div>
+		
+		<div id="capitaines1">
+		
+		<h2>Information</h2>
+			<p id="li2">Selectionner un Capitaine pour avoir plus d'informations!</p>	
+		</div>
+		
+		<div id="capitaines2">
+		
+		<h2>Ajouter Capitaine</h2>
+			<form action="/add2" method="post">
+			Identifiant:<br>
+			<input type="text" id="identifiant" name="identifiantC" value="" required>
+			<br>
+			Mot de Passe:<br>
+			<input type="text" id="motdepasse" name="motdepasseC" value="" required>
+			<br>
+			Nom:<br>
+			<input type="text" id="nom" name="nomC" value="" required>
+			<br>
+			Prénom:<br>
+			<input type="text" id="prenom" name="prenomC" value="" required>
+			<br>
+			Age:<br>
+			<input type="text" id="age" name="ageC" value="" required>
+			<br>
+			Tel:<br>
+			<input type="text" id="tel" name="telC" value="" required>
+			<br>
+			Adresse:<br>
+			<br>
+			CP:
+			<br>
+			<input type="text" id="codepostale" name="codepostaleC" value="" required>
+			<br>
+			Ville:
+			<br>
+			<input type="text" id="ville" name="villeC" value="" required>
+			<br>
+			No. Rue:
+			<br>
+			<input type="text" id="norue" name="norueC" value="" required>
+			<br>
+			Lieu:
+			<br>
+			<input type="text" id="lieu" name="lieuC" value="" required>
+			<br>
+			pays:
+			<br>
+			<input type="text" id="pays" name="paysC" value="" required>
+			<br>
+			Sexe:<br>
+			<input type="text" id="sexe" name="sexeC" value="" required>
+			<br>
+			<input type="submit" value="Ajouter">
+		</div>
+		
+		<div id="occupe1">
+		
+			<p id="li3">Selectionner un navires en mission pour en savoir plus></p>	
+		
+		</div>
+		
+		
+
+		
+	</div>
+
+</body>
+
+
+</html>
