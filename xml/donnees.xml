@@ -1,2 +1,151 @@
-<?xml version='1.0' encoding='utf-8'?>
-<armateur><capitaines><personne sexe="M"><nom>YUE</nom><prenom>Jonathan</prenom><age>50</age><telephone>06600210</telephone><adresse><codepostale>24000</codepostale><ville>PERIGUEUX</ville><norue>15</norue><lieu>combe des dames</lieu><pays>FRANCE</pays></adresse><passe>123</passe><identifiant>a</identifiant><idBailC>000001</idBailC></personne><personne sexe="M"><nom>CHUN</nom><prenom>Oliver</prenom><age>55</age><telephone>06600211</telephone><adresse><codepostale>24000</codepostale><ville>PERIGUEUX</ville><norue>15</norue><lieu>combe des wo</lieu><pays>FRANCE</pays></adresse><passe>admin</passe><identifiant>admin</identifiant><idBailC>admin</idBailC></personne><personne sexe="M"><nom>RALF</nom><prenom>Jack</prenom><age>26</age><telephone>06640210</telephone><adresse><codepostale>44000</codepostale><ville>NANTES</ville><norue>1</norue><lieu>Independance</lieu><pays>FRANCE</pays></adresse><passe>123</passe><identifiant>b</identifiant><idBailC>000002</idBailC></personne><personne sexe="F"><nom>FANNY</nom><prenom>Chloe</prenom><age>50</age><telephone>07600210</telephone><adresse><codepostale>44000</codepostale><ville>NANTES</ville><norue>3</norue><lieu>christianc pauc</lieu><pays>FRANCE</pays></adresse><passe>123</passe><identifiant>c</identifiant><idBailC>pasdebail</idBailC></personne><personne sexe="M"><nom>Lam</nom><prenom>Tom</prenom><age>68</age><telephone>06600219</telephone><adresse><codepostale>25000</codepostale><ville>BORDEAUX</ville><norue>12</norue><lieu>Des Anges</lieu><pays>FRANCE</pays></adresse><passe>123</passe><identifiant>d</identifiant><idBailC>pasdebail</idBailC></personne></capitaines><navires><navire disponible="oui"><nomnav>navire1</nomnav><bail etat="operationnel"><idBail>000001</idBail><prise>2015-07-20T01:00:00-05:00</prise><retrocession>2015-09-20T01:00:00-05:00</retrocession><dureeB>60 jours</dureeB></bail><mission type="mission1"><debut>2015-07-20T01:00:00-05:00</debut><fin>2015-08-20T01:00:00-05:00</fin><dureeM>30 jours</dureeM><capitaine><nomM>YUE</nomM><prenomM>Jonathan</prenomM></capitaine><idMission>Inde</idMission><decision>disponible</decision></mission></navire><navire disponible="oui"><nomnav>navire2</nomnav><bail etat="nonoperationnel"><idBail>pasdispo</idBail><prise>pasdeprise</prise><retrocession>pasderetrocession</retrocession><dureeB>pasdeduree</dureeB></bail><mission type="pasdetype"><debut>pasdedebut</debut><fin>pasdefin</fin><dureeM>pasdeduree</dureeM><capitaine><nomM>pasdenom</nomM><prenomM>pasdeprenom</prenomM></capitaine><idMission>pasid</idMission><decision>disponible</decision></mission></navire><navire disponible="oui"><nomnav>navire3</nomnav><bail etat="operationnel"><idBail>000002</idBail><prise>2015-09-20T01:00:00-05:00</prise><retrocession>2015-09-30T01:00:00-05:00</retrocession><dureeB>30 jours</dureeB></bail><mission type="mission3"><debut>2015-09-20T01:00:00-05:00</debut><fin>2015-09-21T01:00:00-05:00</fin><dureeM>12 jours</dureeM><capitaine><nomM>Fanny</nomM><prenomM>Chloe</prenomM></capitaine><idMission>France</idMission><decision>disponible</decision></mission></navire></navires></armateur>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- Jeu de donnees en xml -->
+
+
+<armateur>
+	<capitaines>
+		<personne sexe="M">
+			<nom>YUE</nom>
+			<prenom>Jonathan</prenom>
+			<age>50</age>
+			<telephone>06600210</telephone>
+			<adresse>
+				<codepostale>24000</codepostale>
+				<ville>PERIGUEUX</ville>
+				<norue>15</norue>
+				<lieu>combe des dames</lieu>
+				<pays>FRANCE</pays>
+			</adresse>
+			<passe>123</passe>
+			<identifiant>a</identifiant>
+			<idBailC>000001</idBailC>
+		</personne>
+		<personne sexe="M">
+			<nom>CHUN</nom>
+			<prenom>Oliver</prenom>
+			<age>55</age>
+			<telephone>06600211</telephone>
+			<adresse>
+				<codepostale>24000</codepostale>
+				<ville>PERIGUEUX</ville>
+				<norue>15</norue>
+				<lieu>combe des wo</lieu>
+				<pays>FRANCE</pays>
+			</adresse>
+			<passe>admin</passe>
+			<identifiant>admin</identifiant>
+			<idBailC>admin</idBailC>
+		</personne>
+		<personne sexe="M">
+			<nom>RALF</nom>
+			<prenom>Jack</prenom>
+			<age>26</age>
+			<telephone>06640210</telephone>
+			<adresse>
+				<codepostale>44000</codepostale>
+				<ville>NANTES</ville>
+				<norue>1</norue>
+				<lieu>Independance</lieu>
+				<pays>FRANCE</pays>
+			</adresse>
+			<passe>123</passe>
+			<identifiant>b</identifiant>
+			<idBailC>000002</idBailC>
+		</personne>
+		<personne sexe="F">
+			<nom>FANNY</nom>
+			<prenom>Chloe</prenom>
+			<age>50</age>
+			<telephone>07600210</telephone>
+			<adresse>
+				<codepostale>44000</codepostale>
+				<ville>NANTES</ville>
+				<norue>3</norue>
+				<lieu>christianc pauc</lieu>
+				<pays>FRANCE</pays>
+			</adresse>
+			<passe>123</passe>
+			<identifiant>c</identifiant>
+			<idBailC>pasdebail</idBailC>
+		</personne>
+		<personne sexe="M">
+			<nom>Lam</nom>
+			<prenom>Tom</prenom>
+			<age>68</age>
+			<telephone>06600219</telephone>
+			<adresse>
+				<codepostale>25000</codepostale>
+				<ville>BORDEAUX</ville>
+				<norue>12</norue>
+				<lieu>Des Anges</lieu>
+				<pays>FRANCE</pays>
+			</adresse>
+			<passe>123</passe>
+			<identifiant>d</identifiant>
+			<idBailC>pasdebail</idBailC>
+		</personne>
+	</capitaines>
+	<navires>
+		<navire disponible="non">
+			<nomnav>navire1</nomnav>
+			<bail etat="operationnel">
+				<idBail>000001</idBail>
+				<prise>2015-07-20T01:00:00-05:00</prise>
+				<retrocession>2015-09-20T01:00:00-05:00</retrocession>
+				<dureeB>60 jours</dureeB>
+			</bail>
+			<mission type="mission1">
+				<debut>2015-07-20T01:00:00-05:00</debut>
+				<fin>2015-08-20T01:00:00-05:00</fin>
+				<dureeM>30 jours</dureeM>
+				<capitaine>
+					<nomM>YUE</nomM>
+					<prenomM>Jonathan</prenomM>
+				</capitaine>
+				<idMission>Inde</idMission>
+				<decision>attente</decision>
+			</mission>
+		</navire>
+		<navire disponible="oui">
+			<nomnav>navire2</nomnav>
+			<bail etat="nonoperationnel">
+				<idBail>pasdispo</idBail>
+				<prise>pasdeprise</prise>
+				<retrocession>pasderetrocession</retrocession>
+				<dureeB>pasdeduree</dureeB>
+			</bail>
+			<mission type="pasdetype">
+				<debut>pasdedebut</debut>
+				<fin>pasdefin</fin>
+				<dureeM>pasdeduree</dureeM>
+				<capitaine>
+					<nomM>pasdenom</nomM>
+					<prenomM>pasdeprenom</prenomM>
+				</capitaine>
+				<idMission>pasid</idMission>
+				<decision>disponible</decision>
+			</mission>
+		</navire>
+		<navire disponible="non">
+			<nomnav>navire3</nomnav>
+			<bail etat="operationnel">
+				<idBail>000002</idBail>
+				<prise>2015-09-20T01:00:00-05:00</prise>
+				<retrocession>2015-09-30T01:00:00-05:00</retrocession>
+				<dureeB>30 jours</dureeB>
+			</bail>
+			<mission type="mission3">
+				<debut>2015-09-20T01:00:00-05:00</debut>
+				<fin>2015-09-21T01:00:00-05:00</fin>
+				<dureeM>12 jours</dureeM>
+				<capitaine>
+					<nomM>Fanny</nomM>
+					<prenomM>Chloe</prenomM>
+				</capitaine>
+				<idMission>France</idMission>
+				<decision>approuver</decision>
+			</mission>
+		</navire>		
+	</navires>
+</armateur>
