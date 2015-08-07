@@ -5,15 +5,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var basex  = require("basex");
 var log = require("basex/debug");
-var serializer = new (require("xmldom")).XMLSerializer;
-var implementation = new (require('xmldom')).DOMImplementation;
 var fs = require('fs');
-var xml2js = require('xml2js');
-var util = require('util');
 var http = require('http');
-var js2xmlparser = require("js2xmlparser");
-var DOMParser = require('xmldom').DOMParser;
-var parser = new DOMParser();
 var et = require('elementtree');
 
 var app = express();
@@ -53,7 +46,7 @@ app.post('/delete',function (req,res){
 	var dataNew, etreeNew;
 	dataNew = fs.readFileSync('xml/donnees.xml').toString();
 	etreeNew = et.parse(dataNew);
-	console.log(etreeNew.getroot().getchildren()[0].getchildren()[0].find('identifiant').text);
+	
 	for (i = 0; i < etreeNew.getroot().getchildren()[0].len(); i++){
 		
 		if (etreeNew.getroot().getchildren()[0].getchildren()[i].find('identifiant').text == selectCapitaines){
