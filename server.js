@@ -89,12 +89,12 @@ app.post('/decision', function (req,res){ //mise a jour du fichier xml  - interf
 	
 	res.redirect("armateur.html");
 });
-/*
-app.get('/addN', function (req,res){ //mise a jour du fichier xml  - interface armateur
-	//variable depuis armateur.html
-	var nomnavajouter = req.body.nomnavajouter;
+
+app.post('/terminermission', function (req,res){ //mise a jour du fichier xml  - interface capitaine
+	//variable depuis capitaine.html
 	
-	console.log("ici1");
+	var idBail = req.body.idbailnavire;
+	
 	var XML = et.XML;
 	var ElementTree = et.ElementTree;
 	var element = et.Element;
@@ -104,74 +104,20 @@ app.get('/addN', function (req,res){ //mise a jour du fichier xml  - interface a
 	etreeNew = et.parse(dataNew);
 	root = element('armateur');
 
-
-	var XML = et.XML;
-	var ElementTree = et.ElementTree;
-	var element = et.Element;
-	var subElement = et.SubElement;
-	root = element('armateur');
-	var dataNew, etreeNew;
-	dataNew = fs.readFileSync('xml/donnees.xml').toString();
-	etreeNew = et.parse(dataNew);
-
-	navireTag = subElement(etreeNew.find('navires'), 'navire');
-	navireTag.set('disponible','oui');
-
-	
-	nomnavTag = subElement(navireTag, 'nomnav');
-	nomnavTag.text = nomnavajouter;
-	//------
-	bailTag = subElement(navireTag, 'bail');
-	bailTag.set("etat","nonoperationnel");
-	//sub
-	idBailTag = subElement(bailTag, 'idBail');
-	idBailTag.text = "pasdebail";
-
-	priseTag = subElement(bailTag, 'prise');
-	priseTag.text = 'pasdeprise';
-
-	retrocessionTag = subElement(bailTag, 'retrocession');
-	retrocessionTag.text = 'pasderetrocession';
-	
-	dureeBTag = subElement(bailTag,'dureeB');
-	dureeBTag.text = 'pasdeduree';
-	//-----
-	//------
-	missionTag = subElement(navireTag, 'mission');
-	missionTag.set('type','pasdetype');
-	//sub
-	debutTag = subElement(missionTag,"debut");
-	debutTag.text = "pasdedebut";
-	
-	finTag = subElement(missionTag, 'fin');
-	finTag .text = "pasdefin";
-	
-	dureeMTag = subElement(missionTag, 'dureeM');
-	dureeMTag.text = "pasdeduree";
-	
-	capitaineTag = subElement(missionTag, 'capitaine');
-	//sub de capitaineTag
-	nomMTag = subElement(capitaineTag,"nomM");
-	nomMTag.text = "pasdenom";
-	
-	prenomMTag = subElement(capitaineTag,"prenomM");
-	prenomMTag.text = "pasdeprenom";
-	//---
-	idMissionTag = subElement(missionTag, 'idMission');
-	idMissionTag.text = "pasdeid";
-	
-	decisionTag = subElement(missionTag,'decision');
-	decisionTag.text = "disponible";
-	//--fin
-
+	for (i = 0; i < etreeNew.getroot().getchildren()[1].len(); i++){
+		
+		if (etreeNew.getroot().getchildren()[1].getchildren()[i].find('bail').getchildren()[0].text == idBail){
+			etreeNew.getroot().getchildren()[1].getchildren()[i].find('mission').getchildren()[5].text = 'disponible';
+			etreeNew.getroot().getchildren()[1].getchildren()[i].set("disponible","oui");
+		}
+	}
 	
 	etree = new ElementTree(etreeNew._root);
 	xml = etree.write({'xml_declaration': true});
 	fs.writeFile('xml/donnees.xml',xml);
 	
-	res.redirect("armateur.html");
+	res.redirect("capitaine.html");
 });
-*/
 
 app.post('/add', function (req,res){ //mise a jour du fichier xml  - interface armateur
 	//variable depuis capitaine.html

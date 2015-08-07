@@ -77,7 +77,7 @@
 }
 
 #codepostale{
-	margin-left: 31px;
+	margin-left: 32px;
 }
 
 #pays{
@@ -86,6 +86,11 @@
 
 #nombreN{
 	margin-left: 20px;
+}
+
+#last{
+	margin-left: 48px;
+	width:144px;
 }
 
 h1, h2, h3, h4, nav{

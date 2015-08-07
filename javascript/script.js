@@ -305,12 +305,13 @@ function capitaineDisponible(){
 	listeidBailC = xmlDoc.getElementsByTagName('idBailC');
 	listeidBail = xmlDoc.getElementsByTagName('idBail');
 	identifiant = document.getElementById("identifiant").value;
+	listeDecision = xmlDoc.getElementsByTagName('decision');
 	
 	
 	for (i = 0; i < listeidentifiant.length; i++){
 		if (identifiant == listeidentifiant[i].childNodes[0].nodeValue){
 			for (j = 0; j < listeidBail.length; j++){
-				if (listeidBailC[i].childNodes[0].nodeValue == listeidBail[j].childNodes[0].nodeValue){
+				if (listeidBailC[i].childNodes[0].nodeValue == listeidBail[j].childNodes[0].nodeValue && listeDecision[j].childNodes[0].nodeValue == "approuver"){
 					
 					document.write("<h3>vous êtes déjà en mission! </h3>");
 				    var allow = 1;
@@ -363,4 +364,52 @@ function nombreCapitaines(){
 		nombreNavire =  xmlDoc.getElementsByTagName("navire").length;
 		document.write('Nombre capitaines: <input type="text" id="nombreC" size=3 name="nombreC" value='+nombrePersonne+ '><br>');
 		document.write('Nombre navires: <input type="text" id="nombreN" size=3 name="nombreN" value='+nombreNavire+ '>');
+}
+
+function decisionCapitaine(){
+	
+	listeidentifiant = xmlDoc.getElementsByTagName('identifiant');
+	listeidBailC = xmlDoc.getElementsByTagName('idBailC');
+	listeidBail = xmlDoc.getElementsByTagName('idBail');
+	identifiant = document.getElementById("identifiant").value;
+	listeDecision = xmlDoc.getElementsByTagName('decision');
+	var allow = 1;
+	
+	for (i = 0; i < listeidentifiant.length; i++){
+		if (identifiant == listeidentifiant[i].childNodes[0].nodeValue){
+			for (j = 0; j < listeidBail.length; j++){
+				if (listeidBailC[i].childNodes[0].nodeValue == listeidBail[j].childNodes[0].nodeValue){
+					
+					allow = 1;
+				    
+					if (listeDecision[j].childNodes[0].nodeValue == "approuver"){
+						
+						allow = 0;
+						document.write("<p>Appuyez si vous avez terminée votre mission!</p>");
+						document.write("ID Bail: <input type='text' name='idbailnavire' value="+ listeidBailC[i].childNodes[0].nodeValue +">");
+						document.write("<br><input type='submit' id='last' value='Mission terminée...' />");
+						
+					}
+					
+
+					
+					if (listeDecision[j].childNodes[0].nodeValue == "attente"){
+						
+						allow = 0;
+						document.write("<h3>Votre mission doit être validée par l'armateur!<h3>")
+						
+					}
+					
+				}
+			}
+		}
+	}
+	
+	if (allow == 1){
+		
+		document.write("<p>Vous n'avez pas fait de demande de mission ou vous n'êtes pas en attente d'une décision...<p>");
+	
+	}
+	
+
 }
