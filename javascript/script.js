@@ -306,22 +306,53 @@ function capitaineDisponible(){
 	listeidBail = xmlDoc.getElementsByTagName('idBail');
 	identifiant = document.getElementById("identifiant").value;
 	listeDecision = xmlDoc.getElementsByTagName('decision');
+	listeNavires = xmlDoc.getElementsByTagName('navire');
 	
 	
 	for (i = 0; i < listeidentifiant.length; i++){
 		if (identifiant == listeidentifiant[i].childNodes[0].nodeValue){
 			for (j = 0; j < listeidBail.length; j++){
 				if (listeidBailC[i].childNodes[0].nodeValue == listeidBail[j].childNodes[0].nodeValue && listeDecision[j].childNodes[0].nodeValue == "approuver"){
-					
 					document.write("<h3>vous êtes déjà en mission! </h3>");
 				    var allow = 1;
 				}
 			}
 		}
 	}
-	
+				
+					
+
 	if (allow != 1){
-		document.write('<br><input type="submit" value="Envoyer la demande" /> ');
+	
+		for (i = 0; i < listeidentifiant.length; i++){
+			if (identifiant == listeidentifiant[i].childNodes[0].nodeValue){
+				for (j = 0; j < listeidBail.length; j++){
+					if (listeidBailC[i].childNodes[0].nodeValue == listeidBail[j].childNodes[0].nodeValue && listeDecision[j].childNodes[0].nodeValue == "attente"){
+						document.write("<h3>vous êtes en attente d'une décision... </h3>");
+						var allow2 = 1;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	if (allow2 != 1 && allow != 1){
+		
+		for (i = 0; i < listeNavires.length; i++){
+			
+			if (listeNavires[i].attributes.getNamedItem("disponible").nodeValue == "oui"){
+				var allow3 = 1;
+			}		
+		}
+		
+		if (allow3 == 1){
+			document.write('<br><input type="submit" value="Envoyer la demande" /> ');
+		} 	else 	{
+			
+				document.write('<h3>Pas de navires disponibles...<h3>');
+			
+			}
 	}
 }
 
