@@ -34,16 +34,28 @@
 			<br>
 			
 			<br>
-			</div>
+		</div>
+		
+		<div id="capitainesSup">
+			<h2>Supprimer un capitaine</h2>
+			<form type="button" action="/delete" method="post">
+			<select name="selectCapitaines" id="selectCapitainesCss2" onchange="afficheDetailsCapitaine();" size="5">
+				<script>listeCapitainesSup();</script>
+			</select>
+			<br>
+			<input type="submit" value="Effacer" />
+			<br>
+			</form>	
+		</div>
 		
 		<div id="capitaines">
 			<h2>Liste des Capitaines</h2>
-			<form type="button" action="/delete" method="post">
+			<form>
 			<select name="selectCapitaines" id="selectCapitainesCss" onchange="afficheDetailsCapitaine();" size="5">
 				<script>listeCapitaines();</script>
 			</select>
 			<br>
-			<input type="submit" value="Effacer"/>
+		
 			<br>
 			</form>	
 		</div>
@@ -65,10 +77,12 @@
 		
 		<div id="mission1">
 		
+		
 			<p id=li1>Selectionner un element pour plus d'informations</p>
 			
 		
 		</div>
+		
 		
 		<div id="capitaines1">
 		
@@ -126,11 +140,14 @@
 			<input type="submit" value="Ajouter">
 		</div>
 		
+		
 		<div id="occupe1">
 		
-			<p id="li3">Selectionner un navires en mission pour en savoir plus></p>	
+			<p id="li3">Selectionner un navires en mission pour en savoir plus</p>	
 		
 		</div>
+		
+
 		
 		
 

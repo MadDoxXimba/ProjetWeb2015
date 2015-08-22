@@ -70,6 +70,20 @@
 	font-size: 15px;
 }
 
+#capitainesSup{
+    font-family:Calibri, Helvetica, serif;
+    color:#444;
+    width:200px;
+	height:150px;
+    padding:30px;
+    border:1px solid #ddd;
+    background:#f6f6f6;
+	position: absolute;
+	top: 300px;
+	margin: 35px;
+	left: 820px;
+}
+
 #mission{
     font-family:Calibri, Helvetica, serif;
     color:#444;
@@ -136,6 +150,11 @@
 } 
 
 #selectCapitainesCss{
+	height: 100px;
+	width: 200px;
+} 
+
+#selectCapitainesCss2{
 	height: 100px;
 	width: 200px;
 } 

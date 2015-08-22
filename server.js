@@ -50,7 +50,7 @@ app.post('/delete',function (req,res){
 	for (i = 0; i < etreeNew.getroot().getchildren()[0].len(); i++){
 		
 		if (etreeNew.getroot().getchildren()[0].getchildren()[i].find('identifiant').text == selectCapitaines){
-			console.log(etreeNew.getroot().getchildren()[0].getchildren()[i]);
+			
 			etreeNew.getroot().getchildren()[0].remove(etreeNew.getroot().getchildren()[0].getchildren()[i]);
 			
 		}
@@ -136,7 +136,7 @@ app.post('/add', function (req,res){ //mise a jour du fichier xml  - interface a
 	var idmissionM = req.body.idmissionM
 	var dureeB = req.body.dureeB;
 	
-	console.log("ici2");
+	
 	var XML = et.XML;
 	var ElementTree = et.ElementTree;
 	var element = et.Element;

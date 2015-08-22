@@ -74,6 +74,42 @@ function listeCapitaines(){
 	};
 };
 
+//liste tous les capitaines qui ne sont pas en mission
+function listeCapitainesSup(){
+	
+	
+	listePersonnes = xmlDoc.getElementsByTagName("personne");
+	listeIdentifiant = xmlDoc.getElementsByTagName("identifiant");
+	nomPersonnes = xmlDoc.getElementsByTagName("nom");
+	prenomPersonnes = xmlDoc.getElementsByTagName("prenom");
+	listeidBail = xmlDoc.getElementsByTagName("idBailC");
+	listeidBailM = xmlDoc.getElementsByTagName("idBail");
+	
+	var count = 0;
+	
+	for (i = 0; i < listeidBail.length; i++){
+		
+		if (listeIdentifiant[i].childNodes[0].nodeValue != 'admin'){
+			
+			for (j = 0; j < listeidBailM.length; j++){
+				
+				if (listeidBail[i].childNodes[0].nodeValue != listeidBailM[j].childNodes[0].nodeValue){
+					count += 1;
+				}
+				
+			}
+			
+			if (count == listeidBailM.length){
+				document.write('<option value='+ listeIdentifiant[i].childNodes[0].nodeValue +'>'+nomPersonnes[i].childNodes[0].nodeValue +' '+ prenomPersonnes[i].childNodes[0].nodeValue+'</option>');
+			}
+			count = 0;
+		}
+		
+	}
+	
+
+};
+
 //lister tous les missions a approuver ou refuser
 
 function listeMissions(){
@@ -221,7 +257,9 @@ function afficheDetailsCapitaine(){
 	listeNoRue = xmlDoc.getElementsByTagName("norue");
 	listePays = xmlDoc.getElementsByTagName("pays");
 	for (i = 0; i < listeIdentifiant.length; i++){
+		
 		if (selection == listeIdentifiant[i].childNodes[0].nodeValue ){
+					
 			index = i;
 		}
 	}
@@ -410,6 +448,8 @@ function nombreCapitaines(){
 		document.write('Nombre capitaines: <input type="text" id="nombreC" size=3 name="nombreC" value='+nombrePersonne+ '><br>');
 		document.write('Nombre navires: <input type="text" id="nombreN" size=3 name="nombreN" value='+nombreNavire+ '>');
 }
+
+
 
 function decisionCapitaine(){
 	
